@@ -16,7 +16,7 @@ class ShoppingViewModel(
     }
 
     fun delete(item: ShoppingItem) = CoroutineScope(Dispatchers.Main).launch {
-        repository.upsert(item)
+        repository.delete(item)
     }
 
     //because its just a read operation you don't have to put it in coroutine
